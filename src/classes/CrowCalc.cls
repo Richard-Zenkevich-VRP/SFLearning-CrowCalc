@@ -13,7 +13,7 @@ public with sharing class CrowCalc {
 
         try {
             insert crowsToAdd;
-        } catch (DmlException e) {
+        } catch (Exception e) {
             System.debug(e.getMessage());
 
             return false;
@@ -32,7 +32,7 @@ public with sharing class CrowCalc {
 
         try {
             delete crowsToSubtract;
-        } catch (DmlException e) {
+        } catch (Exception e) {
             System.debug(e.getMessage());
 
             return false;
